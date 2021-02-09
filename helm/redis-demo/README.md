@@ -3,10 +3,13 @@
 
 ## 操作步骤
 ### 安装helm
-install-helm.sh
+```bash
+chmod +x install-helm.sh
+./install-helm.sh
+```
 
 ### 添加仓库并找到redis chart
-1.添加仓库
+1.添加仓库: 这一步时间可能比较久，请耐心等待
 ```bash 
 helm repo add stable https://charts.helm.sh/stable
 ```
