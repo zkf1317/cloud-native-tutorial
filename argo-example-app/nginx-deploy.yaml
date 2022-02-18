@@ -14,7 +14,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - image: docker.io/bharamicrosystems/nginx:v1
+        - image: docker.io/bharamicrosystems/nginx:v2
           name: nginx
           ports:
             - containerPort: 80
