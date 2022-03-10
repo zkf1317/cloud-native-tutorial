@@ -1,0 +1,8 @@
+apiVersion: network.kubesphere.io/v1alpha2
+kind: Eip
+metadata:
+    name: layer2-eip
+spec:
+    address: 192.168.1.230-192.168.1.235
+    protocol: layer2
+    interface: enp0s3

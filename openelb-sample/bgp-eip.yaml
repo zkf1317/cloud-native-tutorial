@@ -1,0 +1,6 @@
+apiVersion: network.kubesphere.io/v1alpha2
+kind: Eip
+metadata:
+  name: porter-bgp-eip
+spec:
+  address: 192.168.1.230-192.168.1.235

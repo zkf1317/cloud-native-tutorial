@@ -1,0 +1,8 @@
+apiVersion: network.kubesphere.io/v1alpha2
+kind: BgpConf
+metadata:
+  name: default
+spec:
+  as: 50000
+  listenPort: 17900
+  routerId: 192.168.1.171

@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: bgp-svc
+  annotations:
+    lb.kubesphere.io/v1alpha1: openelb
+    protocol.openelb.kubesphere.io/v1alpha1: bgp
+    eip.openelb.kubesphere.io/v1alpha2: porter-bgp-eip
+spec:
+  selector:
+    app: openelb
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+  externalTrafficPolicy: Cluster

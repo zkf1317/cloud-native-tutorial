@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: layer2-svc
+  annotations:
+    lb.kubesphere.io/v1alpha1: openelb
+    protocol.openelb.kubesphere.io/v1alpha1: layer2
+    eip.openelb.kubesphere.io/v1alpha2: layer2-eip
+spec:
+  selector:
+    app: layer2-openelb
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+  externalTrafficPolicy: Cluster
