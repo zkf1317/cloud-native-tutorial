@@ -1,0 +1,2 @@
+#docker run --rm --network=host -d --name minio -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=password" -v /data/kefeng/minio/data:/data -v /data/kefeng/minio/tls:/tls minio/minio server --certs-dir /tls --console-address "192.168.3.206:41463" --address "192.168.3.206:9000" /data
+docker run --rm --network=host -d --name minio -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=password" -v /data/kefeng/minio/data:/data minio/minio server --console-address "192.168.3.206:41463" --address "192.168.3.206:9000" /data
